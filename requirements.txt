@@ -1,4 +1,5 @@
 docopt
+scipy
 numpy
 dpu-utils>=0.1.30
-tensorflow-gpu>=1.13.1
+tensorflow-gpu==1.13.1
