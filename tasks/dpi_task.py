@@ -177,7 +177,7 @@ class DPI_Task(Sparse_Graph_Task):
                                                             segment_ids=placeholders['graph_nodes_list'],
                                                             num_segments=placeholders['num_graphs'])
                 per_graph_outputs = tf.squeeze(per_graph_outputs)  # [g]
-
+                print(per_graph_outputs)
                 per_graph_errors = per_graph_outputs - placeholders['target_values'][internal_id, :]
                 task_metrics['abs_err_task%i' % task_id] = tf.reduce_sum(tf.abs(per_graph_errors))
                 tf.summary.scalar('mae_task%i' % task_id,
@@ -267,7 +267,7 @@ class DPI_Task(Sparse_Graph_Task):
         maes_str = " ".join("%i:%.5f" % (task_id, maes['mae_task%i' % task_id])
                             for task_id in self.params['task_ids'])
         # The following translates back from MAE on the property values normalised to the [0,1] range to the original scale:
-        err_str = " ".join("%i:%.5f" % (task_id, maes['mae_task%i' % task_id] / self.CHEMICAL_ACC_NORMALISING_FACTORS[task_id])
+        err_str = " ".join("%i:%.5f" % (task_id, maes['mae_task%i' % task_id])
                            for task_id in self.params['task_ids'])
 
         return "MAEs: %s | Error Ratios: %s" % (maes_str, err_str)

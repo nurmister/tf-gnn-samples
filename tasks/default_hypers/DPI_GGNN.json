@@ -1,6 +1,7 @@
 {
     "task_params": {},
     "model_params": {
+
         "graph_dense_between_every_num_gnn_layers": 32,
         "learning_rate": 0.0008471209461829375,
         "graph_inter_layer_norm": true,
@@ -18,7 +19,7 @@
         "message_aggregation_function": "sum",
         "graph_residual_connection_every_num_layers": 2,
         "hidden_size": 128,
-        "max_nodes_in_batch": 50000,
+        "max_nodes_in_batch": 1000,
         "learning_rate_decay": 0.98
     }
 }

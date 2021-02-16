@@ -1,6 +1,6 @@
 docopt
 scipy
-numpy
+numpy==1.16.0
 pandas
 biopandas
 progressbar2
