@@ -101,4 +101,8 @@ ENV/
 .mypy_cache/
 
 molecules_*.json
-data/*
+data/qm9/*
+data/dpi/raw/*
+data/dpi/*.pkl
+data/dpi/*.jsonl*
+#data/*
