@@ -12,14 +12,14 @@
         "optimizer": "RMSProp",
         "clamp_gradient_norm": 1.0,
         "patience": 25,
-        "max_epochs": 10000,
+        "max_epochs": 100,
         "graph_rnn_cell": "RNN",
         "graph_layer_input_dropout_keep_prob": 1.0,
         "graph_num_layers": 6,
         "message_aggregation_function": "sum",
         "graph_residual_connection_every_num_layers": 2,
         "hidden_size": 128,
-        "max_nodes_in_batch": 1000,
+        "max_nodes_in_batch": 10000,
         "learning_rate_decay": 0.98
     }
 }

@@ -106,3 +106,6 @@ data/dpi/raw/*
 data/dpi/*.pkl
 data/dpi/*.jsonl*
 #data/*
+tensorboard/*
+trained_models/*
+*.bat

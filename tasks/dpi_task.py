@@ -177,7 +177,6 @@ class DPI_Task(Sparse_Graph_Task):
                                                             segment_ids=placeholders['graph_nodes_list'],
                                                             num_segments=placeholders['num_graphs'])
                 per_graph_outputs = tf.squeeze(per_graph_outputs)  # [g]
-                print(per_graph_outputs)
                 per_graph_errors = per_graph_outputs - placeholders['target_values'][internal_id, :]
                 task_metrics['abs_err_task%i' % task_id] = tf.reduce_sum(tf.abs(per_graph_errors))
                 tf.summary.scalar('mae_task%i' % task_id,
